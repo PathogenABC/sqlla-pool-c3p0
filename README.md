@@ -1,6 +1,6 @@
 # sqlla-pool-c3p0
 
-[![](https://jitpack.io/v/PathogenABC/sqlla.svg)](https://jitpack.io/#PathogenABC/sqlla)
+[![](https://jitpack.io/v/PathogenABC/sqlla-pool-c3p0.svg)](https://jitpack.io/#PathogenABC/sqlla-pool-c3p0)
 
 基于 c3p0 连接池的 Sqlla.ConnectionPool 数据源的实现
 
