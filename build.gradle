@@ -1,0 +1,27 @@
+group 'com.greenbean.poplar.sqlla'
+version '1.0.1'
+
+apply plugin: 'java'
+apply plugin: 'maven'
+
+sourceCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile 'com.github.PathogenABC:sqlla:1.0.1'
+    compile 'com.mchange:c3p0:0.9.5'
+}
+
+// 上传到本地仓库
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: 'file:/Users/chrisding/Works/localRepos')
+        }
+    }
+}
