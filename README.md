@@ -21,7 +21,7 @@ allprojects {
 
 ```
 dependencies {
-    compile 'com.github.PathogenABC:sqlla-pool-c3p0:1.0.1'
+    compile 'com.github.PathogenABC:sqlla-pool-c3p0:1.0.2'
 }
 ```
 
