@@ -1,10 +1,14 @@
 group 'com.greenbean.poplar.sqlla'
-version '1.0.2'
+version '1.0.7'
 
 apply plugin: 'java'
 apply plugin: 'maven'
 
 sourceCompatibility = 1.7
+
+jar {
+    from sourceSets.main.allSource
+}
 
 repositories {
     mavenCentral()
@@ -13,7 +17,8 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
-    compile 'com.github.PathogenABC:sqlla:1.0.2'
+//    compile 'com.github.PathogenABC:sqlla:1.0.5'
+    compile 'com.greenbean.poplar.sqlla:sqlla:1.0.6'
     compile 'com.mchange:c3p0:0.9.5'
 }
 

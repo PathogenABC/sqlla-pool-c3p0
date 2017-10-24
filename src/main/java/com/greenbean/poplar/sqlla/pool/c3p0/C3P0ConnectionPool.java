@@ -2,6 +2,7 @@ package com.greenbean.poplar.sqlla.pool.c3p0;
 
 import com.greenbean.poplar.sqlla.Sqlla;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
+import com.mchange.v2.c3p0.DataSources;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -59,6 +60,15 @@ public class C3P0ConnectionPool implements Sqlla.ConnectionPool {
 
     @Override
     public Connection getConnection() throws SQLException {
+        if (mSource == null) {
+            throw new SQLException("data source is already being destroyed");
+        }
         return mSource.getConnection();
+    }
+
+    @Override
+    public void destroy() throws SQLException {
+        DataSources.destroy(mSource);
+        mSource = null;
     }
 }
